@@ -3,9 +3,13 @@ nnoremap H ^
 nnoremap L $
 nnoremap x "_x
 nnoremap X "_X
+set ttymouse=xterm2 " 目的是在tmux 中也正常使用
+set mouse=a
 set clipboard=unnamed
 set showcmd
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 set cursorline
-" highlight CursorLine   cterm=NONE ctermbg=black  guibg=NONE guifg=NONE
+inoremap qq <Esc>
+nnoremap ; :
+xnoremap ; :
