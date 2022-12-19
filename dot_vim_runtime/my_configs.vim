@@ -16,3 +16,4 @@ set showcmd
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 set cursorline
+colorscheme gruvbox
