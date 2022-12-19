@@ -127,7 +127,7 @@ alias pip='pip3'
 alias view="nvim -R"
 alias vimdiff="nvim -d"
 alias ll="ls -all"
-alias tmux="/opt/homebrew/bin/tmux"
+# alias tmux="/opt/homebrew/bin/tmux"
 alias ci="chezmoi"
 alias cie="chezmoi edit"
 
