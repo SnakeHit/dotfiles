@@ -124,6 +124,7 @@ alias pip='pip3'
 
 
 #-- alias ------------------------------
+alias vim="nvim"
 alias view="nvim -R"
 alias vimdiff="nvim -d"
 alias ll="ls -all"
