@@ -24,7 +24,7 @@ cmp.setup {
         fallback()
       end
     end,
-    ["<CR>"] = cmp.mapping.confirm { select = true },
+    -- ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<C-e>"] = cmp.mapping.abort(),
     ["<Esc>"] = cmp.mapping.close(),
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
@@ -34,11 +34,11 @@ cmp.setup {
     { name = "nvim_lsp" }, -- For nvim-lsp
     { name = "ultisnips" }, -- For ultisnips user.
     { name = "path" }, -- for path completion
-    { name = "buffer", keyword_length = 2 }, -- for buffer word completion
+    { name = "buffer", keyword_length = 1 }, -- for buffer word completion
     { name = "emoji", insert = true }, -- emoji completion
   },
   completion = {
-    keyword_length = 1,
+    keyword_length = 0,
     completeopt = "menu,noselect",
   },
   view = {
@@ -60,14 +60,6 @@ cmp.setup {
   },
 }
 
-cmp.setup.filetype("tex", {
-  sources = {
-    { name = "omni" },
-    { name = "ultisnips" }, -- For ultisnips user.
-    { name = "buffer", keyword_length = 2 }, -- for buffer word completion
-    { name = "path" }, -- for path completion
-  },
-})
 
 --  see https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-dark-theme-colors-to-the-menu
 vim.cmd([[

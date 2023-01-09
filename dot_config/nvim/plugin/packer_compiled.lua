@@ -92,6 +92,36 @@ _G.packer_plugins = {
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/bufexplorer.zip",
     url = "https://github.com/vim-scripts/bufexplorer.zip"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -102,13 +132,20 @@ _G.packer_plugins = {
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
-  ["lualine.nvim"] = {
-    config = { "require('plugin-config.statusline')" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/tami5/lspsaga.nvim"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-hlslens"] = {
     config = { "require('plugin-config.hlslens')" },
@@ -144,17 +181,20 @@ _G.packer_plugins = {
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["tabout.nvim"] = {
-    config = { "\27LJ\2\n•\3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\t\15completion\2\21enable_backwards\2\21ignore_beginning\2\22default_shift_tab\n<C-d>\16default_tab\n<C-t>\21act_as_shift_tab\1\15act_as_tab\2\21backwards_tabkey\f<S-Tab>\vtabkey\n<Tab>\nsetup\vtabout\frequire\0" },
-    loaded = true,
-    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/tabout.nvim",
-    url = "https://github.com/abecodes/tabout.nvim",
-    wants = { "nvim-treesitter" }
-  },
   vim = {
     loaded = true,
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -173,6 +213,11 @@ _G.packer_plugins = {
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/opt/vim-python-pep8-indent",
     url = "https://github.com/Vimjas/vim-python-pep8-indent"
   },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
+  },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
     loaded = true,
@@ -188,18 +233,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tabout.nvim
-time([[Config for tabout.nvim]], true)
-try_loadstring("\27LJ\2\n•\3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\t\15completion\2\21enable_backwards\2\21ignore_beginning\2\22default_shift_tab\n<C-d>\16default_tab\n<C-t>\21act_as_shift_tab\1\15act_as_tab\2\21backwards_tabkey\f<S-Tab>\vtabkey\n<Tab>\nsetup\vtabout\frequire\0", "config", "tabout.nvim")
-time([[Config for tabout.nvim]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
 -- Config for: wilder.nvim
 time([[Config for wilder.nvim]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "wilder.nvim")
 time([[Config for wilder.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -214,11 +255,10 @@ time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
-vim.cmd [[nnoremap <silent> * <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "*", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> N <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "N", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[nnoremap <silent> # <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "#", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> n <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "n", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> * <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "*", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[nnoremap <silent> # <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "#", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
@@ -227,10 +267,6 @@ vim.cmd [[au!]]
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'lualine.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false

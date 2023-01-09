@@ -11,7 +11,11 @@ lua require('plugins')
 lua require('keybindings')
 " 皮肤设置
 colorscheme kanagawa
+let g:airline_theme='deus'
 
 " 插件配置
 lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/nvim-tree')
+" lua require('lspconfig')
+" lua require('lsp/setup')
+lua require('plugin-config/nvim-cmp')

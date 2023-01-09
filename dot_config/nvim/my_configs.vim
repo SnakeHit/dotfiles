@@ -18,7 +18,7 @@ au FocusGained,BufEnter * checktime
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
-
+let g:Airlinetheme='dracula'
 " -- setting  -------------------------------------------------------
 " set ttymouse=xterm2 " 目的是在tmux 中也正常使用
 set mouse=a
