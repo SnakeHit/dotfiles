@@ -1,6 +1,9 @@
 return require('packer').startup(function()
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
+    -- theme
+    use {"morhetz/gruvbox"}
+    use {"dracula/vim"}
     use "rebelot/kanagawa.nvim"
     use "jiangmiao/auto-pairs"
     use "joom/vim-commentary"

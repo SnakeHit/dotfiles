@@ -92,6 +92,11 @@ _G.packer_plugins = {
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/bufexplorer.zip",
     url = "https://github.com/vim-scripts/bufexplorer.zip"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
@@ -145,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/tabout.nvim",
     url = "https://github.com/abecodes/tabout.nvim",
     wants = { "nvim-treesitter" }
+  },
+  vim = {
+    loaded = true,
+    path = "/Users/yifansu/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -204,6 +214,7 @@ time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
+vim.cmd [[nnoremap <silent> * <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "*", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> N <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "N", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> # <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "#", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[nnoremap <silent> n <cmd>lua require("packer.load")({'nvim-hlslens'}, { keys = "n", prefix = "" }, _G.packer_plugins)<cr>]]
