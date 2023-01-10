@@ -18,24 +18,27 @@ au FocusGained,BufEnter * checktime
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
-let g:Airlinetheme='dracula'
 " -- setting  -------------------------------------------------------
 " set ttymouse=xterm2 " 目的是在tmux 中也正常使用
 set mouse=a
 set clipboard^=unnamed,unnamedplus
 set showcmd
 set number                     " Show current line number
-set relativenumber             " Show relative line numbers
+" set relativenumber             " Show relative line numbers
 set tabline=%t
 " set cursorline
 set guicursor=i:block
 
+" map in a new line
+map <Leader>p :pu<CR>
+map <Leader>P :pu!<CR>
+
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>
-autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
-
+map <leader>e :e! ~/.config/nvim/my_configs.vim<cr>
+autocmd! bufwritepost ~/.config/nvim/my_configs.vim source ~/.config/nvim/my_configs.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
@@ -138,8 +141,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " -- easymotion ------------------------------------------------------
 " nmap f <Plug>(easymotion-s)
 " nmap F <Plug>(easymotion-F)
-nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
+nmap s <Plug>(easymotion-s)
+nmap t <Plug>(easymotion-t)
+nmap f <Plug>(easymotion-f)
+nmap F <Plug>(easymotion-F)
 let g:EasyMotion_smartcase = 1
 map <Leader><leader>h <Plug>(easymotion-linebackward)
 map <Leader><leader>l <Plug>(easymotion-lineforward)

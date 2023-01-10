@@ -21,6 +21,17 @@ return require('packer').startup(function()
     use {
         "easymotion/vim-easymotion"
     }
+    -- match-up is a plugin that lets you highlight, navigate, and operate on sets of matching text
+    use {
+        'andymass/vim-matchup'
+    }
+    -- 这个插件可以使用 [<Space> 添加空行
+    use {
+        "tpope/vim-unimpaired"
+    }
+    use {
+        "tpope/vim-repeat"
+    }
     use {"vim-airline/vim-airline"}
     use {"vim-airline/vim-airline-themes"}
     -- use 'itchyny/lightline.vim'

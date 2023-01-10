@@ -2,8 +2,8 @@
 lua require('basic')
 source ~/.config/nvim/my_configs.vim
 source ~/.config/nvim/vimrcs/filetypes.vim
-source ~/.config/nvim/vimrcs/extended.vim
-source ~/.config/nvim/vimrcs/basic.vim
+" source ~/.config/nvim/vimrcs/extended.vim
+" source ~/.config/nvim/vimrcs/basic.vim
 
 " Packer插件管理
 lua require('plugins')
@@ -11,7 +11,8 @@ lua require('plugins')
 lua require('keybindings')
 " 皮肤设置
 colorscheme kanagawa
-let g:airline_theme='deus'
+" let g:airline_theme='deus'
+let g:airline_theme='zenburn'
 
 " 插件配置
 lua require('plugin-config/nvim-treesitter')
