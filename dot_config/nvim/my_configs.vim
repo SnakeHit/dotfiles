@@ -149,6 +149,8 @@ let g:EasyMotion_smartcase = 1
 map <Leader><leader>h <Plug>(easymotion-linebackward)
 map <Leader><leader>l <Plug>(easymotion-lineforward)
 
+" -- airlinetoggletrailing
+let g:airline#extensions#whitespace#enabled = 0
 
 """"""""""""""""""""""""""""""wilder.nvim settings""""""""""""""""""""""""""""""
 call timer_start(250, { -> s:wilder_init() })
@@ -261,7 +263,8 @@ nnoremap <silent> <leader>fb :<C-U>Leaderf buffer --popup<CR>
 " Search recent files
 nnoremap <silent> <leader>fr :<C-U>Leaderf mru --popup --absolute-path<CR>
 
-let g:Lf_PopupColorscheme = 'gruvbox_material'
+" change the color for leaderf
+let g:Lf_PopupColorscheme = 'onedark'
 
 " Change keybinding in LeaderF prompt mode, use ctrl-n and ctrl-p to navigate
 " items.
