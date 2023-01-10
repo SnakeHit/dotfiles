@@ -20,3 +20,11 @@ lua require('plugin-config/nvim-tree')
 " lua require('lspconfig')
 " lua require('lsp/setup')
 lua require('plugin-config/nvim-cmp')
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+    -- [options]
+  },
+}
+EOF

@@ -33,6 +33,15 @@ set guicursor=i:block
 map <Leader>p :pu<CR>
 map <Leader>P :pu!<CR>
 
+
+" delete backwards fully
+nmap db dvb
+nmap dT dvT
+nmap dF dvF
+nmap cb cvb
+nmap cT cvT
+nmap cF cvF
+
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
