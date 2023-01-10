@@ -26,7 +26,8 @@ set showcmd
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 set tabline=%t
-" set cursorline
+set cursorline
+set cursorlineopt=number
 set guicursor=i:block
 
 " map in a new line
@@ -273,7 +274,8 @@ nnoremap <silent> <leader>fb :<C-U>Leaderf buffer --popup<CR>
 nnoremap <silent> <leader>fr :<C-U>Leaderf mru --popup --absolute-path<CR>
 
 " change the color for leaderf
-let g:Lf_PopupColorscheme = 'gruvbox_material'
+" let g:Lf_PopupColorscheme = 'gruvbox_material'
+" let g:Lf_PopupColorscheme = 'gruvbox_material'
 
 " Change keybinding in LeaderF prompt mode, use ctrl-n and ctrl-p to navigate
 " items.

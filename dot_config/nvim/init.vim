@@ -10,11 +10,11 @@ lua require('plugins')
 " 快捷键映射
 lua require('keybindings')
 " 皮肤设置
-" colorscheme kanagawa
-colorscheme gruvbox
+colorscheme kanagawa
+" colorscheme gruvbox
 " let g:airline_theme='deus'
-" let g:airline_theme='zenburn'
-let g:airline_theme='gruvbox'
+let g:airline_theme='zenburn'
+" let g:airline_theme='gruvbox'
 
 " 插件配置
 lua require('plugin-config/nvim-treesitter')
