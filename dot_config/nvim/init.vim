@@ -10,9 +10,11 @@ lua require('plugins')
 " 快捷键映射
 lua require('keybindings')
 " 皮肤设置
-colorscheme kanagawa
+" colorscheme kanagawa
+colorscheme gruvbox
 " let g:airline_theme='deus'
-let g:airline_theme='zenburn'
+" let g:airline_theme='zenburn'
+let g:airline_theme='gruvbox'
 
 " 插件配置
 lua require('plugin-config/nvim-treesitter')
@@ -24,6 +26,7 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
   matchup = {
     enable = true,              -- mandatory, false will disable the whole extension
+    disable_virtual_text = true
     -- [options]
   },
 }
