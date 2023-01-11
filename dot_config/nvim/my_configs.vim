@@ -26,14 +26,23 @@ set showcmd
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 set tabline=%t
+" set the cursorlinenumber color NOT cursorline
 set cursorline
 set cursorlineopt=number
 set guicursor=i:block
 
 " map in a new line
-map <Leader>p :pu<CR>
-map <Leader>P :pu!<CR>
+nnoremap <Leader>p :pu<CR>
+nnoremap <Leader>P :pu!<CR>
 
+
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
 
 " delete backwards fully
 nmap db dvb
@@ -43,6 +52,8 @@ nmap cb cvb
 nmap cT cvT
 nmap cF cvF
 
+" save quickly
+nmap <leader>w :w!<cr>
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
@@ -275,7 +286,7 @@ nnoremap <silent> <leader>fr :<C-U>Leaderf mru --popup --absolute-path<CR>
 
 " change the color for leaderf
 " let g:Lf_PopupColorscheme = 'gruvbox_material'
-" let g:Lf_PopupColorscheme = 'gruvbox_material'
+let g:Lf_PopupColorscheme = 'onedark'
 
 " Change keybinding in LeaderF prompt mode, use ctrl-n and ctrl-p to navigate
 " items.
