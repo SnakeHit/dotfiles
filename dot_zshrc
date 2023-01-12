@@ -139,7 +139,6 @@ export LUA_PATH="~/.config/nvim/lua/"
 
 # set english
 export LANG=en_US.UTF-8
-export PATH=~/miniforge3/bin:$PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -156,12 +155,25 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+if [[ "$(uname)" == "Darwin" ]]; then 
+    {
+        export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+        export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+        export PATH=~/miniforge3/bin:$PATH
+        export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+    };
+fi
+
+if [[ "$(uname)" == "Linux" ]]; then 
+    {
+        export AM_HOME=/home/yifansu/ics2020/abstract-machine
+        export NEMU_HOME=/home/yifansu/ics2020/nemu
+    }; 
+fi
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+
 # The plugin will auto execute this zvm_after_init function
 function zvm_after_init() {
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
