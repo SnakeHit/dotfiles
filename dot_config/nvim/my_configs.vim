@@ -92,6 +92,11 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" set ignorecase - All your searches will be case insensitive
+" set smartcase - Your search will be case sensitive if it contains an uppercase letter
+set ignorecase
+set smartcase
+
 filetype plugin indent on
 "Python Settings
 autocmd FileType python set softtabstop=4
@@ -300,3 +305,22 @@ let g:bufExplorerShowRelativePath=1
 let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
+
+
+""""""""""""""""""""""""""""""
+" Telescope 
+""""""""""""""""""""""""""""""
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fr <cmd>Telescope oldfiles<cr>
+nnoremap <leader>fc <cmd>Telescope command_history<cr>
+nnoremap <leader>ft <cmd>Telescope tags<cr>
+nnoremap <leader>fj <cmd>Telescope jumplist<cr>
+
+nnoremap <leader>gs <cmd>Telescope git_status<cr>
+nnoremap <leader>gc <cmd>Telescope git_commits<cr>
+nnoremap <leader>gb <cmd>Telescope git_branches<cr>
+

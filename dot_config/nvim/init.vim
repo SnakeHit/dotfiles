@@ -22,6 +22,7 @@ lua require('plugin-config/nvim-tree')
 " lua require('lspconfig')
 " lua require('lsp/setup')
 lua require('plugin-config/nvim-cmp')
+lua require('plugin-config/telescope')
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   matchup = {
