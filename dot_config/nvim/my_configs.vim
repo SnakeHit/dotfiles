@@ -126,20 +126,9 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
-
-" Close all the buffers
-map <leader>ba :bufdo bd<cr>
-
+map <leader>d :bdelete<cr>
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -226,84 +215,85 @@ endfunction
 
 
 """""""""""""""""""""""""""""LeaderF settings"""""""""""""""""""""
-" Do not use cache file
-let g:Lf_UseCache = 0
-" Refresh each time we call leaderf
-let g:Lf_UseMemoryCache = 0
+" " Do not use cache file
+" let g:Lf_UseCache = 0
+" " Refresh each time we call leaderf
+" let g:Lf_UseMemoryCache = 0
 
-" Ignore certain files and directories when searching files
-let g:Lf_WildIgnore = {
-  \ 'dir': ['.git', '__pycache__', '.DS_Store'],
-  \ 'file': ['*.exe', '*.dll', '*.so', '*.o', '*.pyc', '*.jpg', '*.png',
-  \ '*.gif', '*.svg', '*.ico', '*.db', '*.tgz', '*.tar.gz', '*.gz',
-  \ '*.zip', '*.bin', '*.pptx', '*.xlsx', '*.docx', '*.pdf', '*.tmp',
-  \ '*.wmv', '*.mkv', '*.mp4', '*.rmvb', '*.ttf', '*.ttc', '*.otf',
-  \ '*.mp3', '*.aac']
-  \}
+" " Ignore certain files and directories when searching files
+" let g:Lf_WildIgnore = {
+"   \ 'dir': ['.git', '__pycache__', '.DS_Store'],
+"   \ 'file': ['*.exe', '*.dll', '*.so', '*.o', '*.pyc', '*.jpg', '*.png',
+"   \ '*.gif', '*.svg', '*.ico', '*.db', '*.tgz', '*.tar.gz', '*.gz',
+"   \ '*.zip', '*.bin', '*.pptx', '*.xlsx', '*.docx', '*.pdf', '*.tmp',
+"   \ '*.wmv', '*.mkv', '*.mp4', '*.rmvb', '*.ttf', '*.ttc', '*.otf',
+"   \ '*.mp3', '*.aac']
+"   \}
 
-" Only fuzzy-search files names
-let g:Lf_DefaultMode = 'FullPath'
+" " Only fuzzy-search files names
+" let g:Lf_DefaultMode = 'FullPath'
 
-" Popup window settings
-let w = float2nr(&columns * 0.8)
-if w > 140
-  let g:Lf_PopupWidth = 140
-else
-  let g:Lf_PopupWidth = w
-endif
+" " Popup window settings
+" let w = float2nr(&columns * 0.8)
+" if w > 140
+"   let g:Lf_PopupWidth = 140
+" else
+"   let g:Lf_PopupWidth = w
+" endif
 
-let g:Lf_PopupPosition = [0, float2nr((&columns - g:Lf_PopupWidth)/2)]
+" let g:Lf_PopupPosition = [0, float2nr((&columns - g:Lf_PopupWidth)/2)]
 
-" Do not use version control tool to list files under a directory since
-" submodules are not searched by default.
-let g:Lf_UseVersionControlTool = 0
+" " Do not use version control tool to list files under a directory since
+" " submodules are not searched by default.
+" let g:Lf_UseVersionControlTool = 0
 
-" Use rg as the default search tool
-let g:Lf_DefaultExternalTool = "rg"
+" " Use rg as the default search tool
+" let g:Lf_DefaultExternalTool = "rg"
 
-" show dot files
-let g:Lf_ShowHidden = 1
+" " show dot files
+" let g:Lf_ShowHidden = 1
 
-" Disable default mapping
-let g:Lf_ShortcutF = ''
-let g:Lf_ShortcutB = ''
+" " Disable default mapping
+" let g:Lf_ShortcutF = ''
+" let g:Lf_ShortcutB = ''
 
-" set up working directory for git repository
-let g:Lf_WorkingDirectoryMode = 'a'
+" " set up working directory for git repository
+" let g:Lf_WorkingDirectoryMode = 'a'
 
-" Search files in popup window
-nnoremap <silent> <leader>ff :<C-U>Leaderf file --popup<CR>
+" " Search files in popup window
+" nnoremap <silent> <leader>ff :<C-U>Leaderf file --popup<CR>
 
-" Grep project files in popup window
-nnoremap <silent> <leader>fg :<C-U>Leaderf rg --no-messages --popup<CR>
+" " Grep project files in popup window
+" nnoremap <silent> <leader>fg :<C-U>Leaderf rg --no-messages --popup<CR>
 
-" Search vim help files
-nnoremap <silent> <leader>fh :<C-U>Leaderf help --popup<CR>
+" " Search vim help files
+" nnoremap <silent> <leader>fh :<C-U>Leaderf help --popup<CR>
 
-" Search tags in current buffer
-nnoremap <silent> <leader>ft :<C-U>Leaderf bufTag --popup<CR>
+" " Search tags in current buffer
+" nnoremap <silent> <leader>ft :<C-U>Leaderf bufTag --popup<CR>
 
-" Switch buffers
-nnoremap <silent> <leader>fb :<C-U>Leaderf buffer --popup<CR>
+" " Switch buffers
+" nnoremap <silent> <leader>fb :<C-U>Leaderf buffer --popup<CR>
 
-" Search recent files
-nnoremap <silent> <leader>fr :<C-U>Leaderf mru --popup --absolute-path<CR>
+" " Search recent files
+" nnoremap <silent> <leader>fr :<C-U>Leaderf mru --popup --absolute-path<CR>
 
-" change the color for leaderf
-" let g:Lf_PopupColorscheme = 'gruvbox_material'
-let g:Lf_PopupColorscheme = 'onedark'
+" " change the color for leaderf
+" " let g:Lf_PopupColorscheme = 'gruvbox_material'
+" let g:Lf_PopupColorscheme = 'onedark'
 
-" Change keybinding in LeaderF prompt mode, use ctrl-n and ctrl-p to navigate
-" items.
-let g:Lf_CommandMap = {'<C-J>': ['<C-N>'], '<C-K>': ['<C-P>']}
+" " Change keybinding in LeaderF prompt mode, use ctrl-n and ctrl-p to navigate
+" " items.
+" let g:Lf_CommandMap = {'<C-J>': ['<C-N>'], '<C-K>': ['<C-P>']}
 
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
+" let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
+" The bufExplorerFindActive cause a bug, when save the file cause other tabs close
+" let g:bufExplorerFindActive=1
+" let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
 
 

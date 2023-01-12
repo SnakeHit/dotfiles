@@ -87,6 +87,14 @@ return require('packer').startup(function()
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {
+        "nvim-telescope/telescope-frecency.nvim",
+        config = function()
+          require"telescope".load_extension("frecency")
+        end,
+        requires = {"kkharji/sqlite.lua"}
+    }
+
     -- Python indent (follows the PEP8 style)
     use { "Vimjas/vim-python-pep8-indent", ft = { "python" } }
 
@@ -125,4 +133,5 @@ return require('packer').startup(function()
         config = [[require('plugin-config.hlslens')]],
     }
     use {"vim-scripts/bufexplorer.zip"}
+    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
