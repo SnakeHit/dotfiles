@@ -103,6 +103,20 @@ return require('packer').startup(function()
         requires = {"kkharji/sqlite.lua"}
     }
 
+    use { 
+        "nvim-telescope/telescope-file-browser.nvim",
+        config = function()
+            require("telescope").load_extension "file_browser"
+        end,
+    }
+
+    use {
+        "nvim-telescope/telescope-project.nvim",
+        config = function()
+            require'telescope'.load_extension('project')
+        end,
+    }
+
     -- Python indent (follows the PEP8 style)
     use { "Vimjas/vim-python-pep8-indent", ft = { "python" } }
 
@@ -142,4 +156,12 @@ return require('packer').startup(function()
     }
     use {"vim-scripts/bufexplorer.zip"}
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = [[require('plugin-config.alpha')]]
+        -- config = function ()
+        --     require'alpha'.setup(require'alpha.themes.startify'.config)
+        -- end
+    }
 end)
