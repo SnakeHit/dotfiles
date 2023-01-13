@@ -309,6 +309,7 @@ nnoremap <leader>fc <cmd>Telescope command_history<cr>
 nnoremap <leader>ft <cmd>Telescope tags<cr>
 nnoremap <leader>fj <cmd>Telescope jumplist<cr>
 nnoremap <leader>fm <cmd>Telescope man_pages sections=ALL<cr>
+nnoremap <leader>fp <cmd>Telescope project<cr>
 
 nnoremap <leader>gs <cmd>Telescope git_status<cr>
 nnoremap <leader>gc <cmd>Telescope git_commits<cr>

@@ -5,6 +5,7 @@ nvim_tree.setup {
   disable_netrw = false,
   hijack_cursor = false,
   hijack_netrw = true,
+  sync_root_with_cwd = true,
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
   open_on_setup = false,
