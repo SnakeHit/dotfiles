@@ -165,4 +165,8 @@ return require('packer').startup(function()
         --     require'alpha'.setup(require'alpha.themes.startify'.config)
         -- end
     }
+    use {
+        "liuchengxu/vista.vim"
+    }
+
 end)

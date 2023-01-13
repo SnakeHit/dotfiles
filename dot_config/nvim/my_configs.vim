@@ -131,14 +131,14 @@ map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
-let g:lasttab = 1
-nmap <leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
+" let g:lasttab = 1
+" nmap <leader>tl :exe "tabn ".g:lasttab<CR>
+" au TabLeave * let g:lasttab = tabpagenr()
 
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<cr>/
+" map <leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<cr>/
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -315,3 +315,9 @@ nnoremap <leader>gs <cmd>Telescope git_status<cr>
 nnoremap <leader>gc <cmd>Telescope git_commits<cr>
 nnoremap <leader>gb <cmd>Telescope git_branches<cr>
 
+""""""""""""""""""""""""""""""
+" Vista
+""""""""""""""""""""""""""""""
+let g:vista_default_executive = 'nvim_lsp'
+
+nnoremap <leader>t <cmd>Vista<cr>
