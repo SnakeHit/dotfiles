@@ -18,8 +18,16 @@ return require('packer').startup(function()
     use {
         "greymd/oscyank.vim"
     }
+    -- use {
+    --     "easymotion/vim-easymotion"
+    -- }
     use {
-        "easymotion/vim-easymotion"
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+        config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
     }
     -- match-up is a plugin that lets you highlight, navigate, and operate on sets of matching text
     use {

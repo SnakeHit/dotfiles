@@ -154,15 +154,13 @@ endtry
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " -- easymotion ------------------------------------------------------
-" nmap f <Plug>(easymotion-s)
+" nmap s <Plug>(easymotion-s)
+" nmap t <Plug>(easymotion-t)
+" nmap f <Plug>(easymotion-f)
 " nmap F <Plug>(easymotion-F)
-nmap s <Plug>(easymotion-s)
-nmap t <Plug>(easymotion-t)
-nmap f <Plug>(easymotion-f)
-nmap F <Plug>(easymotion-F)
-let g:EasyMotion_smartcase = 1
-map <Leader><leader>h <Plug>(easymotion-linebackward)
-map <Leader><leader>l <Plug>(easymotion-lineforward)
+" let g:EasyMotion_smartcase = 1
+" map <Leader><leader>h <Plug>(easymotion-linebackward)
+" map <Leader><leader>l <Plug>(easymotion-lineforward)
 
 " -- airlinetoggletrailing
 let g:airline#extensions#whitespace#enabled = 0

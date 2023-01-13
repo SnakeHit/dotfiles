@@ -24,6 +24,7 @@ lua require('lsp/setup')
 lua require('plugin-config/nvim-cmp')
 lua require('plugin-config/telescope')
 lua require('plugin-config/bufferline')
+lua require('plugin-config/hop')
 lua << EOF
 require'lspconfig'.pyright.setup{}
 EOF
