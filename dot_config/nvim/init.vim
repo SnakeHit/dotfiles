@@ -20,13 +20,12 @@ let g:airline_theme='zenburn'
 lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/nvim-tree')
 " lua require('lspconfig')
-" lua require('lsp/setup')
+lua require('lsp/setup')
 lua require('plugin-config/nvim-cmp')
 lua require('plugin-config/telescope')
 lua require('plugin-config/bufferline')
 lua << EOF
 require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
 EOF
 lua <<EOF
 require'nvim-treesitter.configs'.setup {

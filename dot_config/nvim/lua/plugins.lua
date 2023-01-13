@@ -59,8 +59,8 @@ return require('packer').startup(function()
     -- 
     --
     -- use({ "jose-elias-alvarez/nvim-lsp-ts-utils"})
-    -- use {'williamboman/mason.nvim'}
-    -- use {'williamboman/mason-lspconfig.nvim'}
+    use {'williamboman/mason.nvim'}
+    use {'williamboman/mason-lspconfig.nvim'}
 
 
     -- Lua
