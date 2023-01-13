@@ -43,7 +43,7 @@ return require('packer').startup(function()
     -- use({ "williamboman/nvim-lsp-installer", commit = "36b44679f7cc73968dbb3b09246798a19f7c14e0" })
     -- use({ "williamboman/nvim-lsp-installer" })
     -- Lspconfig
-    -- use({ "neovim/nvim-lspconfig" })
+    use({ "neovim/nvim-lspconfig" })
     --
     --
     use({"hrsh7th/nvim-cmp"})
