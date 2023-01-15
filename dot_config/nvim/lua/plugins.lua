@@ -90,6 +90,12 @@ return require('packer').startup(function()
     --         -- config goes here
     --     end,
     -- }
+    use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+        require('gitsigns').setup()
+      end
+    }
 
     -- use { "Yggdroot/LeaderF", cmd = "Leaderf", run = ":LeaderfInstallCExtension" }
     use {

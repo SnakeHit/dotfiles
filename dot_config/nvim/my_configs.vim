@@ -114,7 +114,6 @@ autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:exec '! python' shellesca
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
-map <C-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
@@ -145,6 +144,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " -- airlinetoggletrailing
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#nvimlsp#enabled = 0
 
 """"""""""""""""""""""""""""""
 " Telescope 
