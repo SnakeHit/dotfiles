@@ -1,3 +1,5 @@
+local utils = require 'lsp/utils'
+local root_pattern = utils.root_pattern("compile_commands.json", "compile_flags.txt", ".git")
 -- :h mason-default-settings
 require("mason").setup({
     ui = {
@@ -103,5 +105,10 @@ require('lspconfig')['clangd'].setup {
     cmd = { 
         "clangd", "--log=verbose" 
     },
+    root_dir = function(fname)
+      local filename = utils.path.is_absolute(fname) and fname
+        or utils.path.join(vim.loop.cwd(), fname)
+      return root_pattern(filename) or utils.path.dirname(filename)
+    end;
     capabilities = capabilities
 }
