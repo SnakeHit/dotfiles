@@ -22,6 +22,11 @@ require'nvim-treesitter.configs'.setup {
       scope_incremental = '<TAB>',
     }
   },
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+    disable_virtual_text = true
+    -- [options]
+  },
   -- indent = {
   --   enable = true
   -- }

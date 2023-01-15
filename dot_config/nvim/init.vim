@@ -1,7 +1,7 @@
 " 基础设置
 lua require('basic')
 source ~/.config/nvim/my_configs.vim
-source ~/.config/nvim/vimrcs/filetypes.vim
+" source ~/.config/nvim/vimrcs/filetypes.vim
 " source ~/.config/nvim/vimrcs/extended.vim
 " source ~/.config/nvim/vimrcs/basic.vim
 
@@ -25,14 +25,3 @@ lua require('plugin-config/nvim-cmp')
 lua require('plugin-config/telescope')
 lua require('plugin-config/bufferline')
 lua require('plugin-config/hop')
-" lua << EOF
-" EOF
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  matchup = {
-    enable = true,              -- mandatory, false will disable the whole extension
-    disable_virtual_text = true
-    -- [options]
-  },
-}
-EOF
