@@ -5,6 +5,7 @@ return require('packer').startup(function()
     use {"morhetz/gruvbox"}
     use {"dracula/vim"}
     use "rebelot/kanagawa.nvim"
+    use {"NLKNguyen/papercolor-theme"}
     use "jiangmiao/auto-pairs"
     use "joom/vim-commentary"
     use {
@@ -83,12 +84,12 @@ return require('packer').startup(function()
             }
         end
     }
-    use {
-        'gelguy/wilder.nvim',
-        config = function()
-            -- config goes here
-        end,
-    }
+    -- use {
+    --     'gelguy/wilder.nvim',
+    --     config = function()
+    --         -- config goes here
+    --     end,
+    -- }
 
     -- use { "Yggdroot/LeaderF", cmd = "Leaderf", run = ":LeaderfInstallCExtension" }
     use {
