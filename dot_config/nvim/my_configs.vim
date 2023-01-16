@@ -163,9 +163,9 @@ nnoremap <leader>fj <cmd>Telescope jumplist<cr>
 nnoremap <leader>fm <cmd>Telescope man_pages sections=ALL<cr>
 nnoremap <leader>fp <cmd>Telescope project<cr>
 
-nnoremap <leader>gs <cmd>Telescope git_status<cr>
-nnoremap <leader>gc <cmd>Telescope git_commits<cr>
-nnoremap <leader>gb <cmd>Telescope git_branches<cr>
+nnoremap <leader>gs <cmd>Gitsigns toggle_signs<cr>
+" nnoremap <leader>gc <cmd>Telescope git_commits<cr>
+" nnoremap <leader>gb <cmd>Telescope git_branches<cr>
 
 """"""""""""""""""""""""""""""
 " Vista
@@ -183,4 +183,4 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-p>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-n>"
-let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/Ultisnips/']
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips/']
