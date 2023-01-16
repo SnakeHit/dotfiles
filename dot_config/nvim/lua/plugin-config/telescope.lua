@@ -32,7 +32,8 @@ require('telescope').setup{
         },
         -- The below pattern is lua regex and not wildcard
         file_ignore_patterns = {"%.out", "%.pdf", "%.png", "%.ok"},
-        prompt_prefix = "🔍 ",
+        -- prompt_prefix = "🔍 ",
+        prompt_prefix = "🔭 ",
         path_display={"smart"},
         buffer_previewer_maker = new_maker,
     }

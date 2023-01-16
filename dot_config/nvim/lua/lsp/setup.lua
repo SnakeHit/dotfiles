@@ -47,12 +47,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 -- Mappings.
 -- See `:help vim.lsp.*` for documentation on any of the below functions
 local bufopts = { noremap=true, silent=true, buffer=bufnr }
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+-- vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+-- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
+-- vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts)
-vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+-- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 
 -- Configure lsp information display style
 -- replace the lsp info symbol

@@ -6,7 +6,7 @@ nnoremap x "_x
 nnoremap X "_X
 nnoremap ; :
 xnoremap ; :
-inoremap jk <Esc>
+" inoremap jk <Esc>
 
 " Key bindings can be changed, see below
 " call wilder#setup({'modes': [':', '/', '?']})
@@ -30,6 +30,7 @@ set tabline=%t
 set cursorline
 set cursorlineopt=number
 set guicursor=i:block
+set scrolloff=7
 " set formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType * set formatoptions-=cro
 " map in a new line
@@ -125,10 +126,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Close the current buffer
-map <leader>d :bdelete<cr>
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -162,6 +159,9 @@ nnoremap <leader>ft <cmd>Telescope tags<cr>
 nnoremap <leader>fj <cmd>Telescope jumplist<cr>
 nnoremap <leader>fm <cmd>Telescope man_pages sections=ALL<cr>
 nnoremap <leader>fp <cmd>Telescope project<cr>
+nnoremap gd <cmd>Telescope lsp_definitions<cr>
+nnoremap gr <cmd>Telescope lsp_references<cr>
+" nnoremap gD <cmd>Telescope lsp_definitions<cr>
 
 nnoremap <leader>gs <cmd>Gitsigns toggle_signs<cr>
 " nnoremap <leader>gc <cmd>Telescope git_commits<cr>
@@ -184,3 +184,24 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-p>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-n>"
 let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips/']
+
+""""""""""""""""""""""""""""""
+" Bufferline
+""""""""""""""""""""""""""""""
+nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
+nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
+nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
+nnoremap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
+nnoremap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
+nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
+nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
+nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
+nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
+nnoremap <silent><leader>$ <Cmd>BufferLineGoToBuffer -1<CR>
+
+" Close the current buffer
+map <leader>d :bdelete<cr>
+" map <leader>l :bnext<cr>
+" map <leader>h :bprevious<cr>
+nnoremap <silent><leader>l :BufferLineCycleNext<CR>
+nnoremap <silent><leader>h :BufferLineCyclePrev<CR>
