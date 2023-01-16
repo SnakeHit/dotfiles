@@ -116,7 +116,7 @@ local t = function(str)
 end
 local cmp = require('cmp')
 
-cmp.setup{
+cmp.setup({
   snippet = {
     expand = function(args)
       vim.fn["UltiSnips#Anon"](args.body)
@@ -225,14 +225,20 @@ cmp.setup{
     end,
   },
 
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'ultisnips' },
-  }, {
-    { name = 'buffer' },
-    { name = 'path' },
-  })
-}
+  -- sources = cmp.config.sources({
+  --   { name = 'nvim_lsp' },
+  --   { name = 'ultisnips' },
+  -- }, {
+  --   { name = 'buffer' },
+  --   { name = 'path' },
+  -- })
+    sources = {
+      {name = "nvim_lsp"},
+      {name = "path"},
+      {name = "ultisnips"},
+      {name = "buffer"},
+    }
+})
 
 -- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {

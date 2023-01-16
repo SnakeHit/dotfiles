@@ -30,7 +30,8 @@ set tabline=%t
 set cursorline
 set cursorlineopt=number
 set guicursor=i:block
-
+" set formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * set formatoptions-=cro
 " map in a new line
 nnoremap <Leader>p :pu<CR>
 nnoremap <Leader>P :pu!<CR>
@@ -172,3 +173,14 @@ nnoremap <leader>gb <cmd>Telescope git_branches<cr>
 let g:vista_default_executive = 'nvim_lsp'
 
 nnoremap <leader>t <cmd>Vista<cr>
+
+
+""""""""""""""""""""""""""""""
+" Ultisnaps
+""""""""""""""""""""""""""""""
+let g:UltiSnipsExpandTrigger="<cr>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-p>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-n>"
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/Ultisnips/']

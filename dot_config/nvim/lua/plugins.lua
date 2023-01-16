@@ -72,6 +72,10 @@ return require('packer').startup(function()
     use {'williamboman/mason.nvim'}
     use {'williamboman/mason-lspconfig.nvim'}
 
+    use {'SirVer/ultisnips'}
+    use("quangnguyen30192/cmp-nvim-ultisnips")
+    use {'honza/vim-snippets'}
+
 
     -- Lua
     use {
