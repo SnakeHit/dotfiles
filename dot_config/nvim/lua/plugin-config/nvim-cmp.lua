@@ -213,6 +213,7 @@ cmp.setup({
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
+      vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({

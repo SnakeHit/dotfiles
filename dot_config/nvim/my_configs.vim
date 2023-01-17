@@ -1,7 +1,9 @@
 " -- mapping -------------------------------------------------------
-nmap <CR> o<Esc>
+nnoremap <CR> o<Esc>
 nnoremap H ^
 nnoremap L $
+vnoremap H ^
+vnoremap L $
 nnoremap x "_x
 nnoremap X "_X
 nnoremap ; :
@@ -47,20 +49,21 @@ vnoremap <leader>d "_d
 vnoremap <leader>p "_dP
 
 " delete backwards fully
-nmap db dvb
-nmap dT dvT
-nmap dF dvF
-nmap cb cvb
-nmap cT cvT
-nmap cF cvF
+nnoremap db dvb
+nnoremap dT dvT
+nnoremap dF dvF
+nnoremap cb cvb
+nnoremap cT cvT
+nnoremap cF cvF
 
 " save quickly
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
+nnoremap <leader>W :wall!<cr>
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.config/nvim/my_configs.vim<cr>
+nnoremap <leader>e :e! ~/.config/nvim/my_configs.vim<cr>
 " autocmd! bufwritepost ~/.config/nvim/my_configs.vim source ~/.config/nvim/my_configs.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,20 +118,20 @@ autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:exec '! python' shellesca
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
+nnoremap <space> /
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+nnoremap <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
 
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers
 try
@@ -200,7 +203,7 @@ nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 nnoremap <silent><leader>$ <Cmd>BufferLineGoToBuffer -1<CR>
 
 " Close the current buffer
-map <leader>d :bdelete<cr>
+nnoremap <leader>d :bdelete<cr>
 " map <leader>l :bnext<cr>
 " map <leader>h :bprevious<cr>
 nnoremap <silent><leader>l :BufferLineCycleNext<CR>
