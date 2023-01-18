@@ -198,16 +198,18 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
     --['<C-e>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
     --['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }),
-    -- ['<CR>'] = cmp.mapping({
-    --   i = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-    --   c = function(fallback)
-    --     if cmp.visible() then
-    --       cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true})
-    --     else
-    --       fallback()
-    --     end
-    --   end
-    -- }),
+    ['<CR>'] = cmp.mapping({
+      i = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+      -- c = function(fallback)
+      --   if cmp.visible() then
+      --     cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true})
+      --   else
+      --     fallback()
+      --   end
+      -- end
+    }),
+    -- ['<Esc>'] = cmp.mapping({i = cmp.mapping.close()}) -- for compatiabilty with ultis
+    ['<C-s>'] = cmp.mapping({i = cmp.mapping.close()})
   },
 
   formatting = {

@@ -181,9 +181,9 @@ nnoremap <leader>t <cmd>Vista<cr>
 """"""""""""""""""""""""""""""
 " Ultisnaps
 """"""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger="<cr>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsExpandTrigger="<c-e>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-p>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-n>"
 let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips/']
