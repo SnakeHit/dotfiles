@@ -122,6 +122,7 @@ nnoremap <space> /
 
 " Disable highlight when <leader><cr> is pressed
 nnoremap <silent> <leader><cr> :noh<cr>
+highlight link TSError Normal " Turn off the treesitter when insert
 
 " Smart way to move between windows
 nnoremap <C-j> <C-W>j
@@ -219,3 +220,10 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+
+""""""""""""""""""""""""""""""
+" Vim commentary
+""""""""""""""""""""""""""""""
+"修改注释风格
+autocmd FileType java,c,cpp set commentstring=//\ %s

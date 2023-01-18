@@ -4,10 +4,12 @@ return require('packer').startup(function()
     -- theme
     use {"morhetz/gruvbox"}
     use {"dracula/vim"}
-    use "rebelot/kanagawa.nvim"
+    use {"rebelot/kanagawa.nvim"}
     use {"NLKNguyen/papercolor-theme"}
+    use {"sainnhe/everforest"}
+    use {"sainnhe/gruvbox-material"}
 
-    -- ************ three pair completion plugin
+    -- ************ three pair completion plugin ****************
     -- use "jiangmiao/auto-pairs"
     -- use {"rstacruz/vim-closer"}
     use {
