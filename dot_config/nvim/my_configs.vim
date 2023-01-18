@@ -208,3 +208,14 @@ nnoremap <leader>d :bdelete<cr>
 " map <leader>h :bprevious<cr>
 nnoremap <silent><leader>l :BufferLineCycleNext<CR>
 nnoremap <silent><leader>h :BufferLineCyclePrev<CR>
+
+
+
+""""""""""""""""""""""""""""""
+" Vim align
+""""""""""""""""""""""""""""""
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)

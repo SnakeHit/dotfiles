@@ -16,6 +16,8 @@ return require('packer').startup(function()
     }
 
     use "joom/vim-commentary"
+    use "junegunn/vim-easy-align"
+    use "tpope/vim-surround"
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
